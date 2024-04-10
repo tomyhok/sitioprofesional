@@ -1,0 +1,154 @@
+body {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: #ECD0AA;
+    color: #844A20;
+    padding: 10px;
+    justify-content: space-evenly;
+    height:127px;
+    width:100%;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #844A20;
+    text-decoration: none;
+    font-size: 1.5em;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+nav img {
+    width: 130px;
+    height: auto;
+    margin: 0 auto;
+}
+
+.contenedor-foto-texto {
+    height: auto;
+    width: auto;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
+    margin-bottom: 30px;
+}
+
+.contenedor-foto-texto ul {
+    list-style-type: none;
+    flex: auto;
+    padding: 30px;
+    font-size: 1em;
+    text-align: center;
+    text-justify: distribute-all-lines;
+}
+
+.contenedor-foto-texto ul li {
+    padding-bottom: 1em;
+    font-size:1.6em;
+}
+
+.contenedor-foto-texto img {
+    max-width: 300px;
+    max-height: auto;
+    flex: 0 0 200px;
+    margin: 15px;
+}
+
+.subtitulo {
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+}
+
+header {
+    padding: 1em 17%;
+    background-color: #CADFE5;
+}
+
+header h1 {
+    color: #333;
+    font-family: 'Arapey';
+    text-align: center;
+}
+
+header p {
+    color: #333;
+    font-family: 'Poppins';
+    text-align: justify;
+}
+
+main {
+    padding: 1em 17%;
+    font-size: 1.5em;
+}
+
+main h1 {
+    text-align: center;
+}
+
+#Misión {
+    text-align: center;
+}
+
+#Visión {
+    text-align: center;
+}
+
+#Valores {
+    text-align: center;
+}
+
+#Valores ul {
+    list-style-type: circle;
+    list-style-position: inside;
+}
+
+#FotosPortfolio ul {
+    list-style-type: none;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: space-evenly;
+}
+
+#FotosPortfolio img {
+    width: 300px;
+    height: 199px; 
+}
+
+footer {
+    background-color: #775943;
+    color: #fff;
+    padding: 2em 1em;
+    position: relative;
+    bottom:0%;
+    width: 100%;
+    height:fit-content;
+}
+
+footer ul {
+    list-style-type: none;
+    display:flex;
+    flex-direction:row;
+}
+
+footer img {
+    width: 35px;
+    height: 35px;
+}
+
