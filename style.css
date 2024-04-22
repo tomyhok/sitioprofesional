@@ -1,6 +1,6 @@
 /* general */
 
-html, body {
+body {
     font-family: Cormorant Garamond;
     background-color: #000000;
     color: #ffffff;
@@ -15,6 +15,30 @@ html, body {
     min-height:100vh;
     display: flex;
     flex-direction: column;
+}
+
+html {
+    font-size: 16px;
+
+    @media screen and (max-width: 540px) {
+        font-size: 12px;
+
+        .cards p {
+            font-size:0.8rem;
+        }
+        .cards h3 {
+            font-size:0.8rem;
+        }
+    }
+
+    @media screen and (max-width: 900px){
+        .cards p {
+            font-size:1.1rem;
+        }
+        .cards h3 {
+            font-size:1.1rem;
+        }
+    }
 }
 
 /* navegador */
@@ -58,14 +82,14 @@ nav ul {
         width: 10vw;
     }
     nav ul li a {
-        font-size: 1.5vh;
+        font-size: 0.8rem;
     }
 }
 
 nav ul li a {
     color: #ffffff;
     text-decoration: none;
-    font-size: 2vh;
+    font-size: 1.5rem;
 }
 
 /* header */
@@ -75,23 +99,23 @@ header {
 }
 
 header img {
-    max-width: 100%;
+    max-width: 70vw;
     width: auto;
-    height: 30vh;
+    height: 14rem;
 }
 
 #portfolio_header img {
-    max-width: 100%;
-    width: 20vw;
-    height: auto;
+    max-width: 70vw;
+    width: auto;
+    height: 6.5rem;
     padding-top: 2vh;
     padding-bottom: 4vh;
 }
 
 #sobrenosotros_header img {
-    max-width: 100%;
-    width: 25vw;
-    height: auto;
+    max-width: 70vw;
+    width: auto;
+    height: 6.5rem;
     padding-top: 2vh;
     padding-bottom: 2vh;
 }
@@ -108,68 +132,51 @@ main h1 {
 
 main h2 {
     color: #ffffff;
-    font-size: 3vh;
+    font-size: 2.5rem;
 }
 
 main p {
     color: #FFF;
     text-align: center;
-    font-size: 3vh;
+    font-size: 1.5rem;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
 }
 
-main ul {
-    color: #ffffff;
-    text-align: justify;
-    font-size: 3vh;
-}
-
-main ul li {
-    padding-bottom: 0.8em;
-}
-
 #carousel {
     padding-top:5vh;
     display: flex;
-    justify-content:space-evenly;
-    position: relative;
-}
-
-#carousel img{
-    width:20vw;
-    height:auto;
+    justify-content:center;
+    align-items:center;
 }
 
 .imagen_cen {
-    width:30vw;
-    height:auto;
+    width:auto;
+    height:15rem;
     z-index: 3;
-    margin: 0 -5vw;
-    position: relative;
+    margin: 0 -1vw;
 }
 
 .imagen_izq, .imagen_der {
-    width:20vw;
-    height:auto;
-    position:relative;
+    width:auto;
+    height:10rem;
     z-index: 1;
 }
 
 /* servicios */
 
-#servicios {
-    max-width: 100%;
-    width: 20vw;
-    height: auto;
+#serviciosimg {
+    max-width: 60vw;
+    width: auto;
+    height: 10rem;
     display: block;
     margin: 0 auto;
 
 }
 
 #main_servicios p {
-    font-size: 2.2vh;
+    font-size: 1.5rem;
 }
 
 .cards {
@@ -190,7 +197,7 @@ main ul li {
     height:auto;
     border: 0.15vw solid #ffffff;
     border-radius:1vw;
-    font-size:2.2vh;
+    font-size:1.5rem;
     text-align:center;
 }
 
@@ -220,6 +227,7 @@ main ul li {
     list-style-type: disc;
     list-style-position: inside;
     text-align: center;
+    font-size:1.5rem;
 }
 
 /* portfolio */
@@ -233,7 +241,7 @@ main ul li {
 
 #FotosPortfolio img {
     max-width: 100%;
-    width: 20vw;
+    width: 25rem;
     height: auto;
 }
 
@@ -266,7 +274,7 @@ footer img {
 footer p {
     flex-shrink: 0;
     text-align: center;
-    font-size: 1.8vh;
+    font-size: 1.125rem;
     font-style: normal;
     font-weight: 400;
 }
