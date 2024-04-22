@@ -1,106 +1,208 @@
-body {
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+/* general */
+
+html, body {
+    font-family: Cormorant Garamond Static;
+    background-color: #000000;
+    color: #ffffff;
+    overflow-x: hidden;
     margin: 0;
     padding: 0;
+    background-image: url(images/Background.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height:100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* navegador */
+
+.menu_checkbox {
+    display: none;
+}
+
+.menu_checkbox:checked + ul {
+    width: 20vw;
 }
 
 nav {
-    background-color: #ECD0AA;
-    color: #844A20;
-    padding: 10px;
-    justify-content: space-evenly;
-    height:127px;
-    width:100%;
+    color: #ffffff;
+    height:100%;
+    width:20vw;
+    position: fixed;
+    left:0;
+    top:0;
+    padding-top: 2vh;
+    padding-left: 1vw;
 }
 
 nav ul {
     list-style-type: none;
     margin: 0;
-    padding: 0;
+    width: 0;
+    overflow:hidden;
     display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+    flex-wrap: wrap;
+    padding-top: 1vh;
+    padding-left: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2em;
+    transition: all .3s;
 }
 
-nav ul li {
-    margin-right: 20px;
+@media (max-width: 800px) {
+    .menu_checkbox:checked + ul {
+        width: 10vw;
+    }
+    nav ul li a {
+        font-size: 1.5vh;
+    }
 }
 
 nav ul li a {
-    color: #844A20;
+    color: #ffffff;
     text-decoration: none;
-    font-size: 1.5em;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 2vh;
 }
 
-nav img {
-    width: 130px;
-    height: auto;
-    margin: 0 auto;
-}
-
-.contenedor-foto-texto {
-    height: auto;
-    width: auto;
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: nowrap;
-    margin-bottom: 30px;
-}
-
-.contenedor-foto-texto ul {
-    list-style-type: none;
-    flex: auto;
-    padding: 30px;
-    font-size: 1em;
-    text-align: center;
-    text-justify: distribute-all-lines;
-}
-
-.contenedor-foto-texto ul li {
-    padding-bottom: 1em;
-    font-size:1.6em;
-}
-
-.contenedor-foto-texto img {
-    max-width: 300px;
-    max-height: auto;
-    flex: 0 0 200px;
-    margin: 15px;
-}
-
-.subtitulo {
-    font-size: 40px;
-    font-weight: bold;
-    text-align: center;
-    margin-top: 20px;
-}
+/* header */
 
 header {
-    padding: 1em 17%;
-    background-color: #CADFE5;
-}
-
-header h1 {
-    color: #333;
-    font-family: 'Arapey';
     text-align: center;
 }
 
-header p {
-    color: #333;
-    font-family: 'Poppins';
-    text-align: justify;
+header img {
+    max-width: 100%;
+    width: 25vw;
+    height: auto;
 }
 
+#portfolio_header img {
+    max-width: 100%;
+    width: 20vw;
+    height: auto;
+    padding-top: 2vh;
+    padding-bottom: 4vh;
+}
+
+#sobrenosotros_header img {
+    max-width: 100%;
+    width: 25vw;
+    height: auto;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+}
+
+/* main */
 main {
-    padding: 1em 17%;
-    font-size: 1.5em;
+    padding: 0vh 15vw;
 }
 
 main h1 {
     text-align: center;
+    color: #ffffff;
 }
+
+main h2 {
+    color: #ffffff;
+    font-size: 3vh;
+}
+
+main p {
+    color: #FFF;
+    text-align: center;
+    font-size: 3vh;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+main ul {
+    color: #ffffff;
+    text-align: justify;
+    font-size: 3vh;
+}
+
+main ul li {
+    padding-bottom: 0.8em;
+}
+
+#carousel {
+    padding-top:5vh;
+    display: flex;
+    justify-content:space-evenly;
+    position: relative;
+}
+
+#carousel img{
+    width:20vw;
+    height:auto;
+}
+
+.imagen_cen {
+    width:30vw;
+    height:auto;
+    z-index: 3;
+    margin: 0 -5vw;
+    position: relative;
+}
+
+.imagen_izq, .imagen_der {
+    width:20vw;
+    height:auto;
+    position:relative;
+    z-index: 1;
+}
+
+/* servicios */
+
+#servicios {
+    max-width: 100%;
+    width: 20vw;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+
+}
+
+#main_servicios p {
+    font-size: 2.2vh;
+}
+
+.cards {
+    display:flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.cards img{
+    max-width: 100%;
+    width: 7vw;
+    height:auto;
+    padding: 2vh 3vw;
+}
+
+.card1, .card2, .card3 {
+    width:20vw;
+    height:auto;
+    border: 0.15vw solid #ffffff;
+    border-radius:1vw;
+    font-size:2.2vh;
+    text-align:center;
+}
+
+.card1, .card2, .card3, h3 {
+    padding: 0vh 1vw 1vh;
+}
+
+.card1, .card2, .card3, p {
+    padding: 0vh 1vw 3vh;
+}
+
+/* sobre nosotros */
 
 #Misión {
     text-align: center;
@@ -115,9 +217,12 @@ main h1 {
 }
 
 #Valores ul {
-    list-style-type: circle;
+    list-style-type: disc;
     list-style-position: inside;
+    text-align: center;
 }
+
+/* portfolio */
 
 #FotosPortfolio ul {
     list-style-type: none;
@@ -127,28 +232,42 @@ main h1 {
 }
 
 #FotosPortfolio img {
-    width: 300px;
-    height: 199px; 
+    max-width: 100%;
+    width: 20vw;
+    height: auto;
 }
 
+/* footer */
+
 footer {
-    background-color: #775943;
+    background: rgba(4, 4, 4, 0.00);
     color: #fff;
-    padding: 2em 1em;
-    position: relative;
-    bottom:0%;
+    padding: 5vh 0 1vh;
     width: 100%;
     height:fit-content;
+    text-align: center;
+    display:flex;
+    flex-direction:column;
+    margin-top:auto;
 }
 
 footer ul {
     list-style-type: none;
     display:flex;
     flex-direction:row;
+    justify-content: center;
 }
 
 footer img {
-    width: 35px;
-    height: 35px;
+    width: auto;
+    height: 3vh;
+}
+
+footer p {
+    flex-shrink: 0;
+    text-align: center;
+    font-size: 1.8vh;
+    font-style: normal;
+    font-weight: 400;
 }
 
