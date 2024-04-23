@@ -13,6 +13,7 @@ body {
     background-size: cover;
     background-attachment: fixed;
     min-height:100vh;
+    max-width:100%;
     display: flex;
     flex-direction: column;
 }
@@ -29,6 +30,8 @@ html {
         .cards h3 {
             font-size:0.8rem;
         }
+
+        overflow-x:hidden;
     }
 
     @media screen and (max-width: 900px){
@@ -38,6 +41,8 @@ html {
         .cards h3 {
             font-size:1.1rem;
         }
+
+        overflow-x:hidden;
     }
 }
 
@@ -48,25 +53,25 @@ html {
 }
 
 .menu_checkbox:checked + ul {
-    width: 20vw;
+    width: 10vw;
 }
 
 nav {
     color: #ffffff;
     height:100%;
-    width:20vw;
+    width:10vw;
     position: fixed;
     left:0;
     top:0;
     padding-top: 2vh;
-    padding-left: 1vw;
+    padding-left: 1vw; 
 }
 
 nav ul {
     list-style-type: none;
     margin: 0;
     width: 0;
-    overflow:hidden;
+    overflow-x: hidden;
     display: flex;
     flex-wrap: wrap;
     padding-top: 1vh;
@@ -149,11 +154,13 @@ main p {
     display: flex;
     justify-content:center;
     align-items:center;
+    max-width:100%;
 }
 
 .imagen_cen {
     width:auto;
     height:20rem;
+    max-width: 100%;
     z-index: 3;
     margin: 0 -1vw;
 }
@@ -161,6 +168,7 @@ main p {
 .imagen_izq, .imagen_der {
     width:auto;
     height:15rem;
+    max-width: 100%;
     z-index: 1;
 }
 
@@ -172,6 +180,20 @@ main p {
     .imagen_izq, .imagen_der {
         width:auto;
         height:12vh;
+    }
+}
+
+@media screen and (max-width:540px){
+    #carousel {
+        flex-direction:column;
+        gap: 0.7rem;
+    }
+    .imagen_cen {
+        margin: 0 0;
+    }
+    .imagen_izq, .imagen_der {
+        width:auto;
+        height:15vh;
     }
 }
 
