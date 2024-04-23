@@ -184,16 +184,23 @@ main p {
 }
 
 @media screen and (max-width:540px){
+    body {
+        overflow-x:hidden;
+    }
     #carousel {
         flex-direction:column;
         gap: 0.7rem;
     }
     .imagen_cen {
         margin: 0 0;
+        max-width:100%;
+        width:60vw;
+        height:auto;
     }
     .imagen_izq, .imagen_der {
-        width:auto;
-        height:15vh;
+        max-width: 100%;
+        width:60vw;
+        height:auto;
     }
 }
 
