@@ -153,15 +153,26 @@ main p {
 
 .imagen_cen {
     width:auto;
-    height:15rem;
+    height:20rem;
     z-index: 3;
     margin: 0 -1vw;
 }
 
 .imagen_izq, .imagen_der {
     width:auto;
-    height:10rem;
+    height:15rem;
     z-index: 1;
+}
+
+@media screen and (max-width:768px){
+    .imagen_cen {
+        width:auto;
+        height:15vh;
+    }
+    .imagen_izq, .imagen_der {
+        width:auto;
+        height:12vh;
+    }
 }
 
 /* servicios */
