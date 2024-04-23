@@ -264,6 +264,7 @@ footer ul {
     display:flex;
     flex-direction:row;
     justify-content: center;
+    padding-left:0;
 }
 
 footer img {
