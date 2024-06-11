@@ -1,4 +1,4 @@
-/* general */
+/* GENERAL */
 
 body {
     font-family: Cormorant Garamond;
@@ -46,25 +46,31 @@ html {
     }
 }
 
-/* navegador */
+/* SIDEBAR */
 
 .menu_checkbox {
     display: none;
 }
 
-.menu_checkbox:checked + ul {
-    width: 10vw;
+.menu_hamburguesa {
+    cursor: pointer;
 }
 
 nav {
     color: #ffffff;
     height:100%;
-    width:10vw;
+    width:fit-content;
     position: fixed;
     left:0;
     top:0;
     padding-top: 2vh;
     padding-left: 1vw; 
+    background-color: #00000000;
+    z-index: 4;
+    transition: all .3s;
+    display:flex;
+    flex-direction: column;
+    gap:2rem;
 }
 
 nav ul {
@@ -78,7 +84,7 @@ nav ul {
     padding-left: 0;
     flex-direction: column;
     align-items: flex-start;
-    gap: 2em;
+    gap: 3rem;
     transition: all .3s;
 }
 
@@ -97,7 +103,7 @@ nav ul li a {
     font-size: 1.5rem;
 }
 
-/* header */
+/* HEADER */
 
 header {
     text-align: center;
@@ -125,7 +131,8 @@ header img {
     padding-bottom: 2vh;
 }
 
-/* main */
+/* MAIN */
+
 main {
     padding: 0vh 15vw;
 }
@@ -149,7 +156,16 @@ main p {
     line-height: normal;
 }
 
+/* CAROUSEL */
+
 #carousel {
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    max-width:100%;
+}
+
+#imgcarousel {
     padding-top:1rem;
     display: flex;
     justify-content:center;
@@ -157,7 +173,16 @@ main p {
     max-width:100%;
 }
 
-.imagen_cen {
+.botones_carousel {
+    cursor:pointer;
+    margin: 1rem;
+    background-color: #00000000;
+    border:none;
+    padding: 0rem;
+    z-index: 3;
+}
+
+#imagen_cen {
     width:auto;
     height:20rem;
     max-width: 100%;
@@ -165,46 +190,64 @@ main p {
     margin: 0 -1vw;
 }
 
-.imagen_izq, .imagen_der {
+#imagen_izq, #imagen_der {
     width:auto;
     height:15rem;
     max-width: 100%;
     z-index: 1;
 }
 
-@media screen and (max-width:768px){
-    .imagen_cen {
+@media screen and (max-width:1300px){
+    #imagen_cen {
         width:auto;
-        height:15vh;
+        height:15rem;
     }
-    .imagen_izq, .imagen_der {
+
+    #imagen_izq, #imagen_der {
         width:auto;
-        height:12vh;
+        height:12rem;
     }
 }
 
-@media screen and (max-width:540px){
+@media screen and (max-width:1000px){
+    #imagen_cen {
+        width:auto;
+        height:12rem;
+    }
+
+    #imagen_izq, #imagen_der {
+        width:auto;
+        height:9rem;
+    }
+}
+
+@media screen and (max-width:768px){
     body {
         overflow-x:hidden;
     }
+
     #carousel {
+        width:80vw;
+    }
+
+    #imgcarousel {
         flex-direction:column;
         gap: 0.7rem;
     }
-    .imagen_cen {
+    #imagen_cen {
         margin: 0 0;
         max-width:100%;
         width:60vw;
         height:auto;
     }
-    .imagen_izq, .imagen_der {
+    #imagen_izq, #imagen_der {
         max-width: 100%;
         width:60vw;
         height:auto;
     }
 }
 
-/* servicios */
+/* CARDS SERVICIOS */
 
 #serviciosimg {
     max-width: 60vw;
@@ -212,44 +255,68 @@ main p {
     height: 10rem;
     display: block;
     margin: 0 auto;
-
 }
 
-#main_servicios p {
-    font-size: 1.5rem;
-}
-
-.cards {
+#servicios {
     display:flex;
-    justify-content: space-between;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: stretch;
+    flex-direction: row;
+    gap:2rem;
+    height:auto;
 }
 
-.cards img{
+#servicios img{
     max-width: 100%;
     width: 7vw;
-    height:auto;
+    height:fit-content;
     padding: 2vh 3vw;
 }
 
-.card1, .card2, .card3 {
+.card {
     width:20vw;
-    height:auto;
+    height:100%;
     border: 0.15vw solid #ffffff;
     border-radius:1vw;
     font-size:1.5rem;
     text-align:center;
+    background-color:#000000a0;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    flex:1;
+    justify-content: space-between;
+    box-sizing:border-box;
 }
 
-.card1, .card2, .card3, h3 {
+.card h3 {
     padding: 0vh 1vw 1vh;
 }
 
-.card1, .card2, .card3, p {
+.card p {
     padding: 0vh 1vw 3vh;
+    flex-grow:1;
 }
 
-/* sobre nosotros */
+@media screen and (max-width:1300px){
+    body {
+        overflow-x:hidden;
+    }
+
+    #servicios {
+        flex-direction: column;
+        gap:2rem;
+        align-items:center;
+    }
+
+    .card {
+        width:60vw;
+        border-radius:3vw;
+        padding:1rem;
+    }
+}
+
+/* SOBRE NOSOTROS */
 
 #Misión {
     text-align: center;
@@ -270,7 +337,7 @@ main p {
     font-size:1.5rem;
 }
 
-/* portfolio */
+/* PORTFOLIO */
 
 #FotosPortfolio ul {
     list-style-type: none;
@@ -288,7 +355,69 @@ main p {
     height: auto;
 }
 
-/* footer */
+/* FORMULARIO CONTACTO */
+
+#formulario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form {
+    border: 0.15vw solid #ffffff;
+    border-radius:1vw;
+    padding: 2rem;
+    margin-top:5rem;
+    width: 50vw;
+    display: flex;
+    flex-direction:column;
+    background-color: #000000a0;
+    font-size:1rem;
+}
+
+form h2 {
+    margin: 0;
+}
+
+form p {
+    margin: 0;
+    margin-top:0.5rem;
+    text-align: start;
+}
+
+form label {
+    padding-top: 1.5rem;
+}
+
+#mensaje {
+    height: 10rem;
+    padding-bottom: 1.5rem;
+}
+
+#boton_form {
+    text-align:center;
+    padding-top:1.5rem;
+}
+
+#input_form {
+    background-color: #00000000;
+    border-radius: 0.3rem;
+    border-color: #FFF;
+    color: #FFF;
+    font-family: inherit;
+    font-size:1.2rem;
+    padding:0.3rem;
+    cursor:pointer;
+}
+
+@media screen and (max-width:540px){
+    form {
+        border-radius: 3vw;
+    }
+}
+
+
+/* FOOTER */
 
 footer {
     background: rgba(4, 4, 4, 0.00);

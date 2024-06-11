@@ -11,19 +11,19 @@
 </head>
 <body>
 
-    <nav>
+    <nav id = "sidebar">
         <label class = menu_hamburguesa for="menu">
             <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
                 <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
               </svg>
         </label> 
-        <input class = menu_checkbox type="checkbox" id = "menu">
-        <ul>
+        <input class = menu_checkbox type="checkbox" id = "menu" oninput="sidebar()">
+        <ul id = "botones_nav">
             <li><a href="index.html">Inicio</a></li>
             <li><a href="index.html#serviciosimg">Servicios</a></li>
             <li><a href="portfolio.html">Portfolio</a></li>
             <li><a href="sobrenosotros.html">Sobre Nosotros</a></li>
-            <li><a href="#footer">Contacto</a></li>
+            <li><a href="index.html#formulario">Contacto</a></li>
         </ul>
     </nav>
 
@@ -51,13 +51,15 @@
     <footer id = footer>
         <ul>
             <li><a href="https://www.instagram.com/aylu_feraudph/?hl=es-la"target="_blank"><img src="images/icons/ig.png" alt="ig"></a></li>
-            <li><img src="images/icons/lin.png" alt="linkedin"></li>
+            <li><a href="https://www.linkedin.com/in/aylen-feraud-460a962a7/"target="_blank"><img src="images/icons/lin.png" alt="linkedin"></a></li>
             <li><img src="images/icons/pint.png" alt="pinterest"></li>
             <li><img src="images/icons/wpp.png" alt="whatsapp"></li>
         </ul>
         
         <p>&copy; 2024 Feraud PH - Fotografía y Edición</p>
     </footer>
+
+    <script src="script.js" charset="UTF-8"></script>
 
 </body>
 </html>
